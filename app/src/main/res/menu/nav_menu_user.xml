@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <group>
+        <item
+            android:id="@+id/nav_apply_loan"
+            android:icon="@drawable/nav_edit"
+            android:title="Apply for Loan"/>
+        <item
+            android:id="@+id/nav_view_loan_status"
+            android:icon="@drawable/nav_view"
+            android:title="View Loan Status"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/nav_logout"
+            android:title="Logout"/>
+    </group>
+</menu>

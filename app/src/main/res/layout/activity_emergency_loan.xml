@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_emergency"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/phonebg"
+    android:orientation="vertical"
+    tools:context=".EmergencyLoan">
+
+    <TextView
+        android:id="@+id/title_emergency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="times"
+        android:text="Emergency Loan"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/emergency_loan_amount"
+        android:padding="10dp"
+        android:background="#3F4876"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="times"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textColorHint="#FFFFFF"
+        android:inputType="numberDecimal"
+        android:hint="Enter Loan Amount (5K - 25K)" />
+
+    <EditText
+        android:id="@+id/emergency_months"
+        android:padding="10dp"
+        android:background="#3F4876"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="times"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textColorHint="#FFFFFF"
+        android:inputType="number"
+        android:hint="Number of Months to Pay (1-6)" />
+
+    <Button
+        android:id="@+id/apply_emergency_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:backgroundTint="#495385"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="times"
+        android:textColor="#FFFFFF"
+        android:text="Apply for Approval"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+</LinearLayout>

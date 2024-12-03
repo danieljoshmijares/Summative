@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/phonebg"
+    tools:context=".AdminLoginPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/title"
+        android:text="Admin Login"
+        android:textSize="35sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="times" />
+    <EditText
+        android:id="@+id/email"
+        android:padding="10dp"
+        android:background="#855BB4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="times"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textColorHint="#FFFFFF"
+        android:hint="Email Address"/>
+    <EditText
+        android:id="@+id/password"
+        android:padding="10dp"
+        android:background="#855BB4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="times"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textColorHint="#FFFFFF"
+        android:hint="Password"/>
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:backgroundTint="#554CAB"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="times"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textAlignment="gravity"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+
+    <TextView
+        android:id="@+id/adminbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="gravity"
+        android:layout_marginTop="140dp"
+        android:fontFamily="times"
+        android:text="User Login"
+        android:textColor="#FDFDFD"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+</LinearLayout>
