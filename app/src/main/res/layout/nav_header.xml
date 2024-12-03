@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@color/colorPrimary"
+    android:background="@color/purple_500"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -11,7 +11,7 @@
         android:id="@+id/user_image"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:src="@drawable/ic_user"
+        android:src="@drawable/nav_account"
         android:layout_gravity="center"
         android:contentDescription="User Image" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="John Doe"
+        android:text="John Wick"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:textSize="18sp"
@@ -29,7 +29,7 @@
         android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="john.doe@example.com"
+        android:text="john.wick@gmail.com"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:textSize="14sp" />
