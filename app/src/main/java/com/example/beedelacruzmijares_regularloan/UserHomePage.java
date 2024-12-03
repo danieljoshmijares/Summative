@@ -20,15 +20,15 @@ public class UserHomePage extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_user_home);
 
         // Setup the toolbar
-        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         // Initialize the DrawerLayout
         drawerLayout = findViewById(R.id.drawer_layout);
 
         // Setup ActionBarDrawerToggle
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
