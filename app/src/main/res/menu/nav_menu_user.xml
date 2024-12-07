@@ -5,15 +5,15 @@
     <group>
         <item
             android:id="@+id/nav_apply_loan"
-            android:icon="@drawable/nav_edit"
+            android:icon="@drawable/icon_apply_for_loan"
             android:title="Apply for Loan"/>
         <item
             android:id="@+id/nav_view_loan_status"
-            android:icon="@drawable/nav_view"
+            android:icon="@drawable/icon_view_loan_status"
             android:title="View Loan Status"/>
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/nav_logout"
+            android:icon="@drawable/icon_logout"
             android:title="Logout"/>
     </group>
 </menu>
