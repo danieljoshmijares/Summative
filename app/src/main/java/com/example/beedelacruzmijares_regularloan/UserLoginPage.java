@@ -18,8 +18,17 @@ public class UserLoginPage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_user_login_page);
 
-        TextView registerbacktextview = findViewById(R.id.registerbacktextview);
-        registerbacktextview.setOnClickListener(new View.OnClickListener() {
+        Button buttonLogin = findViewById(R.id.login_btn);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserLoginPage.this, AdminLoginPage.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView registerBackTextview = findViewById(R.id.registerbacktextview);
+        registerBackTextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserLoginPage.this, RegistrationPage.class);
@@ -27,8 +36,8 @@ public class UserLoginPage extends AppCompatActivity {
             }
         });
 
-        TextView admintextview = findViewById(R.id.admintextview);
-        admintextview.setOnClickListener(new View.OnClickListener() {
+        TextView adminTextView = findViewById(R.id.admintextview);
+        adminTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserLoginPage.this, AdminLoginPage.class);

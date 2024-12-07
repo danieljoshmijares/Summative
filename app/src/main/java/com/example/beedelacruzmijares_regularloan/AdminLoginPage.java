@@ -26,7 +26,7 @@ public class AdminLoginPage extends AppCompatActivity {
         registerbacktextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminLoginPage.this, RegistrationPage.class);
+                Intent intent = new Intent(AdminLoginPage.this, UserLoginPage.class);
                 startActivity(intent);
             }
         });

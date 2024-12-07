@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +20,20 @@ public class RegistrationPage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_registration_page);
 
-        TextView loginbacktextview = findViewById(R.id.loginbacktextview);
-        loginbacktextview.setOnClickListener(new View.OnClickListener() {
+        Button buttonRegister = findViewById(R.id.register_btn);
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationPage.this, AdminLoginPage.class);
+                Intent intent = new Intent(RegistrationPage.this, UserLoginPage.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView loginBackTextview = findViewById(R.id.loginbacktextview);
+        loginBackTextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistrationPage.this, UserLoginPage.class);
                 startActivity(intent);
             }
         });
