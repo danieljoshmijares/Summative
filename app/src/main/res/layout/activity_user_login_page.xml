@@ -24,7 +24,9 @@
     <EditText
         android:id="@+id/email"
         android:padding="10dp"
-        android:background="#3F4876"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="50dp"
@@ -32,14 +34,14 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="20dp"
         android:fontFamily="times"
-        android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:textColorHint="#FFFFFF"
         android:hint="Email Address"/>
     <EditText
         android:id="@+id/password"
         android:padding="10dp"
-        android:background="#3F4876"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -47,9 +49,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="20dp"
         android:fontFamily="times"
-        android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:textColorHint="#FFFFFF"
         android:hint="Password"/>
     <Button
         android:id="@+id/login_btn"

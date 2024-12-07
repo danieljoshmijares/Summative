@@ -100,24 +100,25 @@
         android:textSize="20sp"
         android:inputType="textPassword"
         android:hint="Confirm Password"/>
+
     <Button
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
         android:layout_gravity="left"
-        android:backgroundTint="#495385"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#495385"
         android:fontFamily="times"
+        android:text="Register"
+        android:textAlignment="gravity"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
-        android:textAlignment="gravity"
-        android:text="Register"
-        android:textStyle="bold"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/loginbacktextview"
