@@ -71,14 +71,14 @@
 
 
     <TextView
-        android:id="@+id/adminbtn"
+        android:id="@+id/userlogintextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textAlignment="gravity"
         android:layout_marginTop="140dp"
         android:fontFamily="times"
-        android:text="User Login"
+        android:text="Login as user instead"
         android:textColor="#FDFDFD"
         android:textColorHighlight="#FFFFFF"
         android:textSize="20sp"

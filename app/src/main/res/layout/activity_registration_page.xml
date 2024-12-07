@@ -118,14 +118,14 @@
         android:textStyle="bold"
         android:textSize="30sp"/>
     <TextView
-        android:id="@+id/logbackbtn"
+        android:id="@+id/loginbacktextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="times"
-        android:text="Return to Login"
+        android:text="Already have an account? Login"
         android:textColor="#FDFDFD"
         android:textColorHighlight="#FFFFFF"
         android:textSize="20sp"

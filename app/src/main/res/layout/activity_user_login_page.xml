@@ -70,28 +70,28 @@
         android:textSize="30sp"/>
 
     <TextView
-        android:id="@+id/registerbackbtn"
+        android:id="@+id/registerbacktextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="times"
-        android:text="Register"
+        android:text="Don't have an account? Register"
         android:textColor="#FDFDFD"
         android:textColorHighlight="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="italic" />
 
     <TextView
-        android:id="@+id/adminbtn"
+        android:id="@+id/admintextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textAlignment="gravity"
         android:layout_marginTop="140dp"
         android:fontFamily="times"
-        android:text="Admin Login"
+        android:text="Login as admin instead"
         android:textColor="#FDFDFD"
         android:textColorHighlight="#FFFFFF"
         android:textSize="20sp"
