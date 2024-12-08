@@ -23,7 +23,7 @@
         android:fontFamily="times" />
 
     <EditText
-        android:id="@+id/regular_loan_amount"
+        android:id="@+id/regular_salary"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -33,7 +33,7 @@
         android:textColorHint="#3399FF"
         android:fontFamily="times"
         android:textSize="20sp"
-        android:hint="Enter Loan Amount" />
+        android:hint="Enter Salary" />
 
     <EditText
         android:id="@+id/regular_months"
@@ -46,6 +46,7 @@
         android:textColorHint="#3399FF"
         android:fontFamily="times"
         android:textSize="20sp"
+        android:inputType="number"
         android:hint="Number of Months to Pay" />
 
     <Button
