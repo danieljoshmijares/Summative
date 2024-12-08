@@ -22,7 +22,7 @@ public class UserLoginPage extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserLoginPage.this, AdminLoginPage.class);
+                Intent intent = new Intent(UserLoginPage.this, UserHomePage.class);
                 startActivity(intent);
             }
         });

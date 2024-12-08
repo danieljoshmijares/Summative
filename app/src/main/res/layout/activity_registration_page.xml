@@ -7,130 +7,113 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/phonebg"
+    android:gravity="center"
     tools:context=".RegistrationPage">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
-        android:textAlignment="center"
         android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="Member Registration"
         android:textSize="35sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:fontFamily="times" />
+        android:fontFamily="times"
+        android:textAlignment="center" />
+
     <EditText
         android:id="@+id/memid"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:background="@drawable/edittext_border"
         android:textColor="#3399FF"
         android:textColorHint="#3399FF"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
         android:fontFamily="times"
         android:textSize="20sp"
         android:inputType="number"
-        android:hint="Employee ID"/>
+        android:hint="Employee ID" />
+
     <EditText
         android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:background="@drawable/edittext_border"
         android:textColor="#3399FF"
         android:textColorHint="#3399FF"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
         android:fontFamily="times"
         android:textSize="20sp"
-        android:hint="Employee Name"/>
+        android:hint="Employee Name" />
+
     <EditText
         android:id="@+id/date"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:background="@drawable/edittext_border"
         android:textColor="#3399FF"
         android:textColorHint="#3399FF"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
         android:fontFamily="times"
         android:textSize="20sp"
         android:inputType="date"
-        android:hint="Date Hired"/>
+        android:hint="Date Hired" />
+
     <EditText
         android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:background="@drawable/edittext_border"
         android:textColor="#3399FF"
         android:textColorHint="#3399FF"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
         android:fontFamily="times"
         android:textSize="20sp"
         android:inputType="textPassword"
-        android:hint="Password"/>
+        android:hint="Password" />
+
     <EditText
         android:id="@+id/confirmp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:background="@drawable/edittext_border"
         android:textColor="#3399FF"
         android:textColorHint="#3399FF"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
         android:fontFamily="times"
         android:textSize="20sp"
         android:inputType="textPassword"
-        android:hint="Confirm Password"/>
+        android:hint="Confirm Password" />
 
     <Button
         android:id="@+id/register_btn"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/button_background"
-        android:backgroundTint="#495385"
+        android:backgroundTint="#3399FF"
         android:fontFamily="times"
         android:text="Register"
-        android:textAlignment="gravity"
         android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/loginbacktextview"
-        android:layout_width="356dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="times"
         android:text="Already have an account? Login"
         android:textColor="#FDFDFD"
-        android:textColorHighlight="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="italic" />
+        android:fontFamily="times"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center" />
+
 </LinearLayout>

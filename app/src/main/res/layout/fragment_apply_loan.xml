@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,34 +12,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Loan Type"
+        android:fontFamily="times"
         android:textSize="24sp"
         android:textColor="#FFFFFF"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:id="@+id/btn_emergency_loan"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Emergency Loan"
+        android:fontFamily="times"
         android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
         android:backgroundTint="#3399FF"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:gravity="center" />
 
     <Button
         android:id="@+id/btn_special_loan"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Special Loan"
+        android:fontFamily="times"
         android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
         android:backgroundTint="#3399FF"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:gravity="center" />
 
     <Button
         android:id="@+id/btn_regular_loan"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Regular Loan"
+        android:fontFamily="times"
         android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
         android:backgroundTint="#3399FF"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:gravity="center" />
+
 </LinearLayout>

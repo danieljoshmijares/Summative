@@ -19,10 +19,6 @@ public class UserHomePage extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
 
-        // Setup the toolbar
-        //androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
         // Initialize the DrawerLayout
         drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -57,7 +53,7 @@ public class UserHomePage extends AppCompatActivity implements NavigationView.On
                     .replace(R.id.fragment_container, new ViewLoanStatusFragment())
                     .commit();
         } else if (item.getItemId() == R.id.nav_logout) {
-            Intent intent = new Intent(this, UserLoginPage.class); // Replace with your login activity
+            Intent intent = new Intent(this, UserLoginPage.class);
             startActivity(intent);
             finish(); // Close the current activity
         }

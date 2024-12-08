@@ -2,90 +2,74 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main_admin_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/phonebg"
+    android:gravity="center"
     tools:context=".AdminLoginPage">
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="150dp"
-        android:fontFamily="times"
-        android:text="Admin Login"
-        android:textColor="#FFFFFF"
-        android:textSize="35sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/edittext_border"
-        android:fontFamily="times"
-        android:hint="Email Address"
-        android:padding="10dp"
-        android:textColor="#3399FF"
-        android:textColorHint="#3399FF"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/edittext_border"
-        android:fontFamily="times"
-        android:hint="Password"
-        android:padding="10dp"
-        android:textColor="#3399FF"
-        android:textColorHint="#3399FF"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/login_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#554CAB"
-        android:fontFamily="times"
-        android:text="Login"
-        android:textAlignment="gravity"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-
-    <TextView
-        android:id="@+id/userlogintextview"
+        android:id="@+id/title_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="50dp"
+        android:text="Admin Login"
+        android:textSize="35sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="times" />
+
+    <EditText
+        android:id="@+id/admin_email"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
         android:fontFamily="times"
-        android:text="Login as user instead"
-        android:textAlignment="gravity"
-        android:textColor="#FDFDFD"
-        android:textColorHighlight="#FFFFFF"
         android:textSize="20sp"
-        android:textStyle="italic" />
+        android:hint="Admin Email" />
+
+    <EditText
+        android:id="@+id/admin_password"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
+        android:fontFamily="times"
+        android:textSize="20sp"
+        android:hint="Admin Password" />
+
+    <Button
+        android:id="@+id/admin_login_btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#3399FF"
+        android:fontFamily="times"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/userloginbacktextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Login as user instead"
+        android:textColor="#FDFDFD"
+        android:fontFamily="times"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center" />
 
 </LinearLayout>

@@ -1,85 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_special"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/phonebg"
     android:orientation="vertical"
+    android:background="@drawable/phonebg"
+    android:gravity="center"
     tools:context=".SpecialLoan">
 
     <TextView
         android:id="@+id/title_special"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="150dp"
-        android:fontFamily="times"
+        android:layout_marginTop="50dp"
         android:text="Special Loan"
-        android:textColor="#FFFFFF"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="times" />
 
     <EditText
         android:id="@+id/special_loan_amount"
-        android:padding="10dp"
-        android:background="#3F4876"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
         android:fontFamily="times"
-        android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:textColorHint="#FFFFFF"
-        android:inputType="numberDecimal"
-        android:hint="Enter Loan Amount (50K - 100K)" />
+        android:hint="Enter Loan Amount" />
 
     <EditText
         android:id="@+id/special_months"
-        android:padding="10dp"
-        android:background="#3F4876"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
         android:fontFamily="times"
-        android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:textColorHint="#FFFFFF"
-        android:inputType="number"
-        android:hint="Number of Months to Pay (1-18)" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:fontFamily="times"
-        android:text="Eligibility: 5 years membership or more"
-        android:textColor="#FDFDFD"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+        android:hint="Number of Months to Pay" />
 
     <Button
         android:id="@+id/apply_special_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:backgroundTint="#495385"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#3399FF"
         android:fontFamily="times"
+        android:text="Apply"
         android:textColor="#FFFFFF"
-        android:text="Apply for Approval"
-        android:textStyle="bold"
-        android:textSize="30sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 </LinearLayout>
+

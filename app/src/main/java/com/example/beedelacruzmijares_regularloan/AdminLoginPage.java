@@ -22,7 +22,7 @@ public class AdminLoginPage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_admin_login_page);
 
-        TextView registerbacktextview = findViewById(R.id.userlogintextview);
+        TextView registerbacktextview = findViewById(R.id.userloginbacktextview);
         registerbacktextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
