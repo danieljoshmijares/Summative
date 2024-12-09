@@ -32,6 +32,8 @@ public class RegularLoan extends AppCompatActivity {
                 }
                 else {
                     double salarynum = parseDouble(salarytxt.getText().toString());
+                    GlobalVariables.setSalary(salarynum);
+                    GlobalVariables.setRegularMonths(monthsnum);
 
                     // Show a toast
                     Toast.makeText(this, "Loan applied successfully!", Toast.LENGTH_SHORT).show();
