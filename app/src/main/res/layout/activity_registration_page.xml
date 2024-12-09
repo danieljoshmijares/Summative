@@ -27,14 +27,15 @@
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:padding="10dp"
         android:background="@drawable/edittext_border"
+        android:fontFamily="times"
+        android:hint="Employee ID"
+        android:inputType="text|textAutoComplete"
+        android:padding="10dp"
         android:textColor="#3399FF"
         android:textColorHint="#3399FF"
-        android:fontFamily="times"
         android:textSize="20sp"
-        android:inputType="number"
-        android:hint="Employee ID" />
+        android:maxLength="8" />
 
     <EditText
         android:id="@+id/name"

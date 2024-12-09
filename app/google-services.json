@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "608985029450",
+    "firebase_url": "https://loanappdb-38ba2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "loanappdb-38ba2",
+    "storage_bucket": "loanappdb-38ba2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608985029450:android:04008b05c803db451d7fb3",
+        "android_client_info": {
+          "package_name": "com.example.beedelacruzmijares_regularloan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDugyNgtIKr2lGOye-hQdSOlJiW6jwTVqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
