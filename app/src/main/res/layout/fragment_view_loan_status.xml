@@ -37,10 +37,30 @@
             android:layout_marginBottom="8dp" />
 
         <TextView
-            android:id="@+id/tvLoanDuration"
+            android:id="@+id/tvMonthsToPay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Loan Duration: "
+            android:text="Months to Pay: "
+            android:textColor="#FFFFFF"
+            android:fontFamily="times"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvServiceCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Charge: "
+            android:textColor="#FFFFFF"
+            android:fontFamily="times"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest: "
             android:textColor="#FFFFFF"
             android:fontFamily="times"
             android:textSize="18sp"
@@ -57,10 +77,10 @@
             android:layout_marginBottom="8dp" />
 
         <TextView
-            android:id="@+id/tvTotalLoanAmount"
+            android:id="@+id/tvTotalAmountPayable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Loan Amount: "
+            android:text="Total Amount Payable: "
             android:textColor="#FFFFFF"
             android:fontFamily="times"
             android:textSize="18sp"
@@ -83,10 +103,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/button_background"
+            android:backgroundTint="#3399FF"
             android:fontFamily="times"
             android:text="Back to Home Page"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
-
 </ScrollView>

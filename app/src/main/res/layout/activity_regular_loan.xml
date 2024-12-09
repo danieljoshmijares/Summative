@@ -36,6 +36,19 @@
         android:hint="Enter Salary" />
 
     <EditText
+        android:id="@+id/regular_loan_amount"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_border"
+        android:textColor="#3399FF"
+        android:textColorHint="#3399FF"
+        android:fontFamily="times"
+        android:textSize="20sp"
+        android:hint="Enter Loan Amount" />
+
+    <EditText
         android:id="@+id/regular_months"
         android:layout_width="300dp"
         android:layout_height="48dp"
