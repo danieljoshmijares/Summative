@@ -92,10 +92,15 @@ public class UserLoginPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    // Retrieve the password from Firebase
+                    // Retrieve the password and date hired from Firebase
                     String dbPassword = snapshot.child("Password").getValue(String.class);
+                    String dateHired = snapshot.child("DateHired").getValue(String.class);
 
                     if (dbPassword != null && dbPassword.equals(password)) {
+                        // Store the employee ID and date hired in GlobalVariables
+                        GlobalVariables.empid = empID;
+                        GlobalVariables.date = dateHired;
+
                         // Login successful
                         Toast.makeText(UserLoginPage.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                         // Redirect to UserHomePage

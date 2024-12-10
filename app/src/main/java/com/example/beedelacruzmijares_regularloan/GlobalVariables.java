@@ -1,6 +1,7 @@
 package com.example.beedelacruzmijares_regularloan;
 
-import static java.lang.Double.parseDouble;
+import android.content.Context;
+import android.widget.Toast;
 
 public class GlobalVariables {
     public static String empid, empname, date, password;
@@ -8,30 +9,39 @@ public class GlobalVariables {
     public static double sploanamount, spmonths, loanint, loantotal, monamort = 0; //SpecialLoan
     public static double salary, regloanamount, regmonths, regloanint, takehome, regservcharge, regmonamort = 0; //Regularloan
 
+    private static Context context;
 
+    // Constructor to set context
+    public GlobalVariables(Context context) {
+        GlobalVariables.context = context;
+    }
 
-    //Emergency Loan
+    // Emergency Loan
     public static void setEmergencyLoanAmount(double newloan){
-        emloanamount = newloan;
+        if (newloan >= 5000 && newloan <= 25000) {
+            emloanamount = newloan;
+        }
     }
     public static void setEmergencyMonths(double newmon){
-        emmonths = newmon;
+            emmonths = newmon;
     }
     public double getEmergencyServicecharge(){
-    servicecharge = emloanamount * 0.01;
-    return servicecharge;
+        servicecharge = emloanamount * 0.01;
+        return servicecharge;
     }
     public static double getEmergencyCash() {
+        servicecharge = emloanamount * 0.01;
         cash = emloanamount + servicecharge;
         return cash;
     }
     public static double getEmergencyLoanPayable() {
+        servicecharge = emloanamount * 0.01;
         interest = emloanamount * 0.006;
-        sixmonpay = (emloanamount + servicecharge + interest)/emmonths;
+        sixmonpay = (emloanamount + servicecharge + interest) / emmonths;
         return sixmonpay;
     }
 
-    //Special Loan
+    // Special Loan
     public static void setSpecialLoanAmount(double newloan){
         sploanamount = newloan;
     }
@@ -54,11 +64,11 @@ public class GlobalVariables {
         return loantotal;
     }
     public static double getMothlyAmort(){
-        monamort = loantotal/spmonths;
+        monamort = loantotal / spmonths;
         return loantotal;
     }
 
-    //Regular Loan
+    // Regular Loan
     public static void setSalary(double newsal){
         salary = newsal;
     }
@@ -82,7 +92,7 @@ public class GlobalVariables {
         } else if (regmonths >= 21 && regmonths <= 24) {
             regloanint *= 0.0080;
         }
-        return regservcharge;
+        return regloanint;
     }
     public static double getTakeHome() {
         regservcharge = regloanamount * 0.02;
@@ -90,8 +100,7 @@ public class GlobalVariables {
         return takehome;
     }
     public static double getRegmonamort() {
-        regmonamort = takehome/regmonths;
+        regmonamort = takehome / regmonths;
         return regmonamort;
     }
-
 }
