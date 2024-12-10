@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(timer);
                 MainActivity.this.finish();
             }
-        }, 3000);
+        }, 3000); //Intro page that disappears after 3 seconds
     }
 
 }
