@@ -36,8 +36,8 @@ public class UserLoginPage extends AppCompatActivity {
         root = FirebaseDatabase.getInstance().getReference("Users");
 
         // Initialize UI elements
-        editTextEmpID = findViewById(R.id.employee_id); // Replace with your EditText ID for Employee ID
-        editTextPassword = findViewById(R.id.password); // Replace with your EditText ID for Password
+        editTextEmpID = findViewById(R.id.employee_id);
+        editTextPassword = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.login_btn);
         registerBackTextView = findViewById(R.id.registerbacktextview);
         adminTextView = findViewById(R.id.admintextview);

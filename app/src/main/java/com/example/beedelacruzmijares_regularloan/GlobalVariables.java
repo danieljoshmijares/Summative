@@ -7,7 +7,7 @@ public class GlobalVariables {
     public static String empid, empname, date, password;
     public static double emloanamount, servicecharge, cash, emmonths, interest, sixmonpay = 0; //EmergencyLoan
     public static double sploanamount, spmonths, loanint, loantotal, monamort = 0; //SpecialLoan
-    public static double salary, regloanamount, regmonths, regloanint, takehome, regservcharge, regmonamort = 0; //Regularloan
+    public static double salary, regloanamount, regmonths, regloanint, takehome, regservcharge, regmonamort, userLoanAmount = 0; //Regularloan
 
     private static Context context;
 
@@ -72,15 +72,21 @@ public class GlobalVariables {
     public static void setSalary(double newsal){
         salary = newsal;
     }
+
     public static void setRegularMonths(double newmon){
         regmonths = newmon;
     }
-    public static double getRegularLoanAmount() {
-        regloanamount = salary * 2.5;
-        return regloanamount;
+
+    public static double getMaxLoanAmount() {
+        return salary * 2.5; // This is the maximum loanable amount
     }
+
+    public static void setUserLoanAmount(double newLoan) {
+        userLoanAmount = newLoan;
+    }
+
     public static double getRegularLoanInterest() {
-        regloanint = regloanamount * regmonths;
+        regloanint = userLoanAmount * regmonths;
         if (regmonths >= 1 && regmonths <= 5) {
             regloanint *= 0.0062;
         } else if (regmonths >= 6 && regmonths <= 10) {
@@ -94,13 +100,16 @@ public class GlobalVariables {
         }
         return regloanint;
     }
-    public static double getTakeHome() {
-        regservcharge = regloanamount * 0.02;
-        takehome = regloanamount - (regloanint + regservcharge);
-        return takehome;
+
+    public static double getServiceCharge() {
+        regservcharge = userLoanAmount * 0.02;
+        return regservcharge;
     }
+
     public static double getRegmonamort() {
-        regmonamort = takehome / regmonths;
+        regservcharge = getServiceCharge();
+        takehome = userLoanAmount - regservcharge;
+        regmonamort = (userLoanAmount + regloanint) / regmonths;
         return regmonamort;
     }
 }
