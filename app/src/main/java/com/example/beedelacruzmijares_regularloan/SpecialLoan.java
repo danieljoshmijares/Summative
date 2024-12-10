@@ -9,10 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -89,34 +94,56 @@ public class SpecialLoan extends AppCompatActivity {
                     // Combined toast message
                     Toast.makeText(SpecialLoan.this, "Loan applied successfully! Loan Data Saved Successfully!", Toast.LENGTH_SHORT).show();
 
-                    // Save data to Firebase
-                    HashMap<String, Object> loanMap = new HashMap<>();
-                    loanMap.put("EmployeeID", employeeId);
-                    loanMap.put("LoanType", "Special");
-                    loanMap.put("LoanAmount", loannum);
-                    loanMap.put("MonthsToPay", monthsnum);
-                    loanMap.put("ServiceCharge", serviceCharge);
-                    loanMap.put("Interest", loanInterest);
-                    loanMap.put("MonthlyAmortization", monthlyAmortization);
-                    loanMap.put("TotalAmountPayable", totalAmountPayable);
-                    loanMap.put("LoanStatus", loanStatus);
+                    // Delete previous loans
+                    deletePreviousLoans(employeeId, () -> {
+                        // Save new loan data to Firebase after deletion
+                        HashMap<String, Object> loanMap = new HashMap<>();
+                        loanMap.put("EmployeeID", employeeId);
+                        loanMap.put("LoanType", "Special");
+                        loanMap.put("LoanAmount", loannum);
+                        loanMap.put("MonthsToPay", monthsnum);
+                        loanMap.put("ServiceCharge", serviceCharge);
+                        loanMap.put("Interest", loanInterest);
+                        loanMap.put("MonthlyAmortization", monthlyAmortization);
+                        loanMap.put("TotalAmountPayable", totalAmountPayable);
+                        loanMap.put("LoanStatus", loanStatus);
 
-                    root.push().setValue(loanMap).addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            Intent intent = new Intent(SpecialLoan.this, UserHomePage.class);
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            Toast.makeText(SpecialLoan.this, "Failed to Save Loan Data. Try again!", Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(e -> {
-                        Log.e(TAG, "Error saving loan data", e);
-                        Toast.makeText(SpecialLoan.this, "Failed to Save Loan Data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        root.push().setValue(loanMap).addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                Intent intent = new Intent(SpecialLoan.this, UserHomePage.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toast.makeText(SpecialLoan.this, "Failed to Save Loan Data. Try again!", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(e -> {
+                            Log.e(TAG, "Error saving loan data", e);
+                            Toast.makeText(SpecialLoan.this, "Failed to Save Loan Data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
                     });
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Error processing loan application", e);
                 Toast.makeText(SpecialLoan.this, "An error occurred: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void deletePreviousLoans(String employeeId, Runnable onComplete) {
+        Query previousLoansQuery = root.orderByChild("EmployeeID").equalTo(employeeId);
+        previousLoansQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot loanSnapshot : snapshot.getChildren()) {
+                    loanSnapshot.getRef().removeValue();
+                }
+                // Run the onComplete action after all previous loans are deleted
+                onComplete.run();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(SpecialLoan.this, "Failed to delete previous loans: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

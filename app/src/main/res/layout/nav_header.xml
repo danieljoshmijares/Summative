@@ -19,17 +19,17 @@
         android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="John Wick"
+        android:text="Peter Gabriel, Mijares"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/user_email"
+        android:id="@+id/user_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="john.wick@gmail.com"
+        android:text="PGM12345"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:textSize="14sp" />

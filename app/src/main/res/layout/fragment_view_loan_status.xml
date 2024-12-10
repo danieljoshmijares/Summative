@@ -98,6 +98,17 @@
             android:layout_marginBottom="16dp" />
 
         <Button
+            android:id="@+id/btnCancelLoan"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#FF0000"
+            android:fontFamily="times"
+            android:text="Cancel Loan"
+            android:textColor="#FFFFFF" />
+
+        <Button
             android:id="@+id/btnBackToMenu"
             android:layout_width="180dp"
             android:layout_height="wrap_content"

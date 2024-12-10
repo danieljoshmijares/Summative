@@ -2,6 +2,8 @@ package com.example.beedelacruzmijares_regularloan;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +33,19 @@ public class UserHomePage extends AppCompatActivity implements NavigationView.On
         // Initialize NavigationView
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Update the navigation header with user information
+        View headerView = navigationView.getHeaderView(0);
+        TextView userNameTextView = headerView.findViewById(R.id.user_name);
+        TextView userIdTextView = headerView.findViewById(R.id.user_id);
+
+        // Retrieve user information from GlobalVariables
+        String userName = GlobalVariables.empname;
+        String userId = GlobalVariables.empid;
+
+        // Set the TextViews with user information
+        userNameTextView.setText(userName);
+        userIdTextView.setText(userId);
 
         // Set the default fragment
         if (savedInstanceState == null) {
