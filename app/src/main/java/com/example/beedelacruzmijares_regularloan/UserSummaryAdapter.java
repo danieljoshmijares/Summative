@@ -33,7 +33,7 @@ public class UserSummaryAdapter extends RecyclerView.Adapter<UserSummaryAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         User user = userList.get(position);
-        holder.tvUserName.setText(user.getName());
+        holder.tvEmployeeId.setText(user.getName());
         holder.tvLoanStatus.setText(user.getLoanStatus());
         holder.itemView.setOnClickListener(v -> listener.onItemClick(user));
     }
@@ -44,11 +44,11 @@ public class UserSummaryAdapter extends RecyclerView.Adapter<UserSummaryAdapter.
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvUserName, tvLoanStatus;
+        TextView tvEmployeeId, tvLoanStatus;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvUserName = itemView.findViewById(R.id.tvUserName);
+            tvEmployeeId = itemView.findViewById(R.id.tvEmployeeId);
             tvLoanStatus = itemView.findViewById(R.id.tvLoanStatus);
         }
     }

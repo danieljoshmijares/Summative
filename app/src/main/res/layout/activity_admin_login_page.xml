@@ -22,7 +22,7 @@
         android:fontFamily="times" />
 
     <EditText
-        android:id="@+id/admin_email"
+        android:id="@+id/admin_id"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -32,7 +32,7 @@
         android:textColorHint="#3399FF"
         android:fontFamily="times"
         android:textSize="20sp"
-        android:hint="Admin Email" />
+        android:hint="Admin ID" />
 
     <EditText
         android:id="@+id/admin_password"

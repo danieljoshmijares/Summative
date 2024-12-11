@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 public class GlobalVariables {
     public static String empid, empname, date, password;
+    public static String adminid = "admin";
     public static double emloanamount, servicecharge, cash, emmonths, interest, sixmonpay = 0; //EmergencyLoan
     public static double sploanamount, spmonths, loanint, loantotal, monamort = 0; //SpecialLoan
     public static double salary, regloanamount, regmonths, regloanint, takehome, regservcharge, regmonamort, userLoanAmount = 0; //Regularloan
